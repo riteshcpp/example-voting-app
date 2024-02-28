@@ -1,0 +1,14 @@
+name: Test Workflows
+on: push
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: List Files
+              run: ls -lrth
+
+            - name: Read File
+              run: cat README.md
